@@ -23,4 +23,5 @@ jobs:
           --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} \
           --destination '$web' \
           --source website \
-          --overwrite
+          --overwrite \
+          --content-type "text/html"
