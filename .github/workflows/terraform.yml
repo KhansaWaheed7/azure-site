@@ -22,6 +22,6 @@ jobs:
         az storage blob upload-batch \
           --account-name ${{ secrets.STORAGE_ACCOUNT_NAME }} \
           --destination '$web' \
-          --source website \
+          --source site \
           --overwrite \
           --content-type "text/html"
