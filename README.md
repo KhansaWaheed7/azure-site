@@ -1,137 +1,172 @@
-# Azure Site Deployment with DevOps Practices
+# Azure Site Infrastructure Deployment with Terraform
 
-A cloud-based web application deployment project demonstrating modern **DevOps workflows** using **Microsoft Azure**, **GitHub**, and automated deployment pipelines.
+A cloud infrastructure automation project focused on provisioning and managing Azure resources using **Terraform** and DevOps best practices.
 
-## Overview
+This repository demonstrates Infrastructure as Code (IaC) workflows for deploying scalable and reproducible Azure environments using Terraform modules, remote state management, and CI/CD-ready configurations.
 
-This project showcases how to deploy and manage a web application on Microsoft Azure using DevOps principles such as:
+## Project Overview
 
-* Continuous Integration & Continuous Deployment (CI/CD)
-* Cloud hosting with Azure
-* Source control using GitHub
-* Automated deployment workflows
-* Scalable and reliable infrastructure practices
+This project automates Azure infrastructure provisioning through Terraform, enabling consistent deployments across environments while reducing manual configuration and operational overhead.
 
-The repository is designed as a beginner-friendly DevOps deployment project for learning cloud deployment and automation concepts.
+The repository is designed with DevOps principles in mind, including:
 
-# Tech Stack
+* Infrastructure as Code (IaC)
+* Declarative cloud provisioning
+* Environment consistency
+* Modular Terraform architecture
+* Version-controlled infrastructure
+* CI/CD integration readiness
+* Scalable Azure resource management
 
-## Cloud Platform
 
-* Microsoft Azure
+## Tech Stack
 
-## DevOps Tools
-
-* GitHub
-* GitHub Actions
-* Azure App Service
-* Azure Deployment Center
-
-## Frontend / Web
-
-* HTML5
-* CSS3
-* JavaScript
+* **Terraform**
+* **Microsoft Azure**
+* **Azure Resource Manager (AzureRM Provider)**
+* **GitHub**
+* **GitHub Actions** (CI/CD Ready)
+* **Infrastructure as Code (IaC)**
 
 ---
 
-# DevOps Workflow
-
-The project follows a basic DevOps lifecycle:
-
-1. Code is pushed to GitHub
-2. GitHub Actions triggers the CI/CD workflow
-3. Azure automatically builds and deploys the application
-4. The latest version becomes available online
-
----
-
-# CI/CD Pipeline
-
-The GitHub Actions workflow automates:
-
-* Build validation
-* Deployment process
-* Azure integration
-* Continuous delivery
-
-### Workflow Features
-
-* Automated deployment on push
-* Cloud-hosted production environment
-* Faster release cycle
-* Reduced manual deployment effort
-
----
-
-# Project Structure
+## Project Structure
 
 ```bash
 azure-site/
 │
-├── .github/workflows/    # GitHub Actions CI/CD workflows
-├── src/                  # Application source files
-├── public/               # Static assets
-├── index.html            # Main entry point
-├── styles.css            # Styling
-├── script.js             # Functionality
+├── main.tf                 # Main infrastructure definitions
+├── variables.tf            # Input variables
+├── outputs.tf              # Output values
+├── provider.tf             # Azure provider configuration
+├── terraform.tfvars        # Variable values
+├── backend.tf              # Remote state configuration
+├── modules/                # Reusable Terraform modules
+├── .github/workflows/      # CI/CD pipelines
 └── README.md
 ```
 
 ---
 
-# Azure Deployment
+## Features
 
-This project is deployed using:
+* Automated Azure infrastructure provisioning
+* Reusable Terraform modules
+* Remote Terraform state management
+* Environment configuration support
+* Scalable and maintainable IaC setup
+* GitHub-integrated DevOps workflow
+* Easy deployment and teardown process
+* CI/CD pipeline support
 
-* Azure Web App / Azure App Service
-* GitHub Deployment Integration
-* Automated CI/CD pipeline
+## Azure Resources Managed
 
-### Deployment Steps
+Depending on the configuration, this project can provision:
 
-1. Create Azure Web App
-2. Connect GitHub repository
-3. Configure deployment workflow
-4. Push code changes
-5. Azure automatically redeploys the latest version
+* Resource Groups
+* Virtual Networks
+* Subnets
+* Storage Accounts
+* App Services
+* Virtual Machines
+* Networking Components
+* Azure Web Apps
 
----
+## Prerequisites
 
-# Getting Started
+Before running this project, ensure you have:
 
-## Clone the Repository
+* An active Azure subscription
+* Terraform installed
+* Azure CLI installed
+* Git installed
+* Appropriate Azure permissions
+
+## Installation
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/KhansaWaheed7/azure-site.git
-```
-
-## Navigate to Project Folder
-
-```bash
 cd azure-site
 ```
 
-## Run Locally
-
-Open `index.html` in your browser or use a local server.
-
-Example using VS Code Live Server:
+### 2. Authenticate with Azure
 
 ```bash
-Right Click → Open with Live Server
+az login
+```
+
+### 3. Initialize Terraform
+
+```bash
+terraform init
+```
+
+### 4. Validate Configuration
+
+```bash
+terraform validate
+```
+
+### 5. Preview Infrastructure Changes
+
+```bash
+terraform plan
+```
+
+### 6. Deploy Infrastructure
+
+```bash
+terraform apply
 ```
 
 ---
 
-# Learning Objectives
+## Destroy Infrastructure
 
-This project was built to practice:
+To remove all provisioned resources:
 
-* DevOps fundamentals
-* Cloud deployment
-* Azure hosting
-* CI/CD pipelines
-* GitHub Actions automation
-* Version control workflows
+```bash
+terraform destroy
+```
+
+---
+
+## Infrastructure as Code (IaC)
+
+This repository follows Infrastructure as Code principles using Terraform’s declarative configuration language to provision Azure infrastructure efficiently and consistently. Terraform enables predictable deployments, version-controlled infrastructure, and automation-friendly workflows.
+
+
+## DevOps Workflow
+
+The project is structured to support modern DevOps practices:
+
+* Automated provisioning
+* Git-based infrastructure versioning
+* CI/CD integration
+* Repeatable deployments
+* Infrastructure consistency
+* Environment scalability
+* Reduced manual intervention
+
+Terraform integrates effectively with Azure and GitHub workflows for automated infrastructure deployment pipelines.
+
+## Learning Objectives
+
+This project demonstrates practical understanding of:
+
+* Terraform fundamentals
+* Azure cloud infrastructure
+* Infrastructure automation
+* DevOps workflows
+* Cloud deployment strategies
+* State management
+* Modular infrastructure design
+
+## Author
+
+Developed by Khansa Waheed
+
+* GitHub: https://github.com/KhansaWaheed7
 
